@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y03-Vv-yIT">
+                                <rect key="frame" x="20" y="139" width="374" height="458"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="와플" translatesAutoresizingMaskIntoConstraints="NO" id="PSD-p5-Wcg">
+                                        <rect key="frame" x="8" y="0.0" width="375" height="458"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="PSD-p5-Wcg" firstAttribute="top" secondItem="Y03-Vv-yIT" secondAttribute="top" id="CQC-ru-876"/>
+                                    <constraint firstAttribute="trailing" secondItem="PSD-p5-Wcg" secondAttribute="trailing" constant="-9" id="OOG-n9-gQh"/>
+                                    <constraint firstItem="PSD-p5-Wcg" firstAttribute="leading" secondItem="Y03-Vv-yIT" secondAttribute="leading" constant="8" id="mIi-5c-bxP"/>
+                                    <constraint firstAttribute="bottom" secondItem="PSD-p5-Wcg" secondAttribute="bottom" id="vO6-Sm-y9p"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GDSC             Waffle어깨요정" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Whu-se-eg7">
+                                <rect key="frame" x="26" y="589" width="362" height="209"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Whu-se-eg7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="545" id="13F-pW-gLb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Whu-se-eg7" secondAttribute="bottom" constant="64" id="504-Cn-mp2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Whu-se-eg7" secondAttribute="bottom" constant="64" id="986-sJ-R8p"/>
+                            <constraint firstItem="Whu-se-eg7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="26" id="EkX-yb-fw7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Whu-se-eg7" secondAttribute="trailing" id="Hc9-zb-845"/>
+                            <constraint firstItem="Y03-Vv-yIT" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailingMargin" id="Wtu-Ub-gpT"/>
+                            <constraint firstItem="Whu-se-eg7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XDU-6T-Qb3"/>
+                            <constraint firstItem="Whu-se-eg7" firstAttribute="centerX" secondItem="Y03-Vv-yIT" secondAttribute="centerX" id="YUl-hj-J1d"/>
+                            <constraint firstItem="Y03-Vv-yIT" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ahe-MU-9Bw"/>
+                            <constraint firstItem="Y03-Vv-yIT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="95" id="kct-YL-sPu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Y03-Vv-yIT" secondAttribute="bottom" constant="265" id="tJu-K8-WQ9"/>
+                            <constraint firstItem="Whu-se-eg7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="545" id="umg-7N-f3R"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="와플" width="1024" height="1024"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
