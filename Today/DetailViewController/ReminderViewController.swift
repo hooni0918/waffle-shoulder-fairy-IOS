@@ -81,8 +81,8 @@ class ReminderViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
      
+      
         
         let cellRegistration = UICollectionView.CellRegistration(handler: cellRegistrationHandler)
         dataSource = DataSource(collectionView: collectionView) { (collectionView: UICollectionView, indexPath: IndexPath, itemIdentifier: Row) in
