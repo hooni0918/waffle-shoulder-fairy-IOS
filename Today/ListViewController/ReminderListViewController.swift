@@ -4,29 +4,24 @@ import UIKit
 class ReminderListViewController: UICollectionViewController {
     var dataSource: DataSource!
     var reminders: [Reminder] = Reminder.sampleData
-    var nextButton = UIButton()
 
-    
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.addSubview(nextButton)
           
-          nextButton.translatesAutoresizingMaskIntoConstraints = false
-          
-        nextButton.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 100).isActive = true
-        nextButton.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 50).isActive = true
-
-        
-          nextButton.widthAnchor.constraint(equalToConstant: 275).isActive = true
-          nextButton.heightAnchor.constraint(equalToConstant: 48).isActive = true
-        
-        
-          nextButton.setTitle("다음", for: .normal)
-          nextButton.setTitleColor(.black, for: .normal)
-          nextButton.backgroundColor = .orange
+//          nextButton.translatesAutoresizingMaskIntoConstraints = false
+//
+//        nextButton.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 100).isActive = true
+//        nextButton.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 50).isActive = true
+//
+//
+//          nextButton.widthAnchor.constraint(equalToConstant: 275).isActive = true
+//          nextButton.heightAnchor.constraint(equalToConstant: 48).isActive = true
+//
+//
+//          nextButton.setTitle("다음", for: .normal)
+//          nextButton.setTitleColor(.black, for: .normal)
+//          nextButton.backgroundColor = .orange
 
         
         let listLayout = listLayout()
@@ -37,6 +32,11 @@ class ReminderListViewController: UICollectionViewController {
         dataSource = DataSource(collectionView: collectionView) { (collectionView: UICollectionView, indexPath: IndexPath, itemIdentifier: Reminder.ID) in
             return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: itemIdentifier)
         }
+        
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didPressAddButton(_:)))
+        addButton.accessibilityLabel = NSLocalizedString("Add reminder", comment: "Add button accessibility label")
+        navigationItem.rightBarButtonItem = addButton
+
         
         updateSnapshot()
         
@@ -60,9 +60,19 @@ class ReminderListViewController: UICollectionViewController {
     private func listLayout() -> UICollectionViewCompositionalLayout {
         var listConfiguration = UICollectionLayoutListConfiguration(appearance: .grouped)
         listConfiguration.showsSeparators = false
+        listConfiguration.trailingSwipeActionsConfigurationProvider = makeSwipeActions
         listConfiguration.backgroundColor = .clear
         return UICollectionViewCompositionalLayout.list(using: listConfiguration)
     }
+    
+    private func makeSwipeActions(for indexPath: IndexPath?) -> UISwipeActionsConfiguration? {
+           guard let indexPath = indexPath, let id = dataSource.itemIdentifier(for: indexPath) else { return nil }
+           let deleteActionTitle = NSLocalizedString("Delete", comment: "Delete action title")
+           let deleteAction = UIContextualAction(style: .destructive, title: deleteActionTitle) { [weak self] _, _, completion in
+               self?.deleteReminder(with: id)
+               self?.updateSnapshot()
+               completion(false)
+           }
+           return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
 }
-
-
