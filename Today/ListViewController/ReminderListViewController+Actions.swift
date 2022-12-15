@@ -5,6 +5,8 @@ extension ReminderListViewController {
     @objc func didPressDoneButton(_ sender: ReminderDoneButton) {
         guard let id = sender.id else { return }
         completeReminder(with: id)
+        
+        
     }
     
     @objc func didPressAddButton(_ sender: UIBarButtonItem) {
@@ -13,6 +15,8 @@ extension ReminderListViewController {
             self?.add(reminder)
             self?.updateSnapshot()
             self?.dismiss(animated: true)
+            
+            
         }
         
         viewController.isAddingNewReminder = true

@@ -1,4 +1,6 @@
 import UIKit
+import Alamofire
+
 
 extension ReminderListViewController {
     typealias DataSource = UICollectionViewDiffableDataSource<Int, Reminder.ID>
@@ -65,24 +67,26 @@ extension ReminderListViewController {
         button.id = reminder.id //미리알람 속성식별
         button.setImage(image, for: .normal)
         return UICellAccessory.CustomViewConfiguration(customView: button, placement: .leading(displayed: .always))
-    }
-    
-    func add(_ reminder: Reminder) {
-          reminders.append(reminder)
-      }
-    func deleteReminder(with id: Reminder.ID) {
-        let index = reminders.indexOfReminder(with: id)
-        reminders.remove(at: index)
-    }
-    
-    func reminder(for id: Reminder.ID) -> Reminder {
-        let index = reminders.indexOfReminder(with: id)
-        return reminders[index]
-    }
-    
-    func update(_ reminder: Reminder, with id: Reminder.ID) {
-        let index = reminders.indexOfReminder(with: id)
-        reminders[index] = reminder
-    }
-}
+      
 
+        }
+        
+        func add(_ reminder: Reminder) {
+            reminders.append(reminder)
+        }
+        func deleteReminder(with id: Reminder.ID) {
+            let index = reminders.indexOfReminder(with: id)
+            reminders.remove(at: index)
+        }
+        
+        func reminder(for id: Reminder.ID) -> Reminder {
+            let index = reminders.indexOfReminder(with: id)
+            return reminders[index]
+        }
+        
+        func update(_ reminder: Reminder, with id: Reminder.ID) {
+            let index = reminders.indexOfReminder(with: id)
+            reminders[index] = reminder
+        }
+    }
+    

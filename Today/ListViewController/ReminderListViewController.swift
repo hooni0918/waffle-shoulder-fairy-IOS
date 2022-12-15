@@ -9,20 +9,6 @@ class ReminderListViewController: UICollectionViewController {
         super.viewDidLoad()
         
           
-//          nextButton.translatesAutoresizingMaskIntoConstraints = false
-//
-//        nextButton.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 100).isActive = true
-//        nextButton.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 50).isActive = true
-//
-//
-//          nextButton.widthAnchor.constraint(equalToConstant: 275).isActive = true
-//          nextButton.heightAnchor.constraint(equalToConstant: 48).isActive = true
-//
-//
-//          nextButton.setTitle("다음", for: .normal)
-//          nextButton.setTitleColor(.black, for: .normal)
-//          nextButton.backgroundColor = .orange
-
         
         let listLayout = listLayout()
         collectionView.collectionViewLayout = listLayout
