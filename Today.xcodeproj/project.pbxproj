@@ -35,6 +35,7 @@
 /* Begin PBXFileReference section */
 		176AC944A028E50FE93BEB8A /* Pods-Today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today.release.xcconfig"; path = "Target Support Files/Pods-Today/Pods-Today.release.xcconfig"; sourceTree = "<group>"; };
 		1EF2C95A38A7E549BE0C4550 /* Pods_Today.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Today.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78866288294B820F004F3568 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		7B4B2B9274A24E5A1221E932 /* Pods-Today.release (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today.release (development).xcconfig"; path = "Target Support Files/Pods-Today/Pods-Today.release (development).xcconfig"; sourceTree = "<group>"; };
 		7C247C9A27287D2100D01478 /* UIView+PinnedSubview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+PinnedSubview.swift"; sourceTree = "<group>"; };
 		7C247C9C27287F0000D01478 /* TextFieldContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldContentView.swift; sourceTree = "<group>"; };
@@ -110,6 +111,7 @@
 		7CB07710270FAA1C0042FB15 = {
 			isa = PBXGroup;
 			children = (
+				78866288294B820F004F3568 /* Config.xcconfig */,
 				7C46B00D27BEF38500AA93B4 /* README.md */,
 				7CB0771B270FAA1C0042FB15 /* Today */,
 				7CB0771A270FAA1C0042FB15 /* Products */,
