@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7886633D2953449C004F3568 /* ReminderListStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886633C2953449C004F3568 /* ReminderListStyle.swift */; };
 		7C247C9B27287D2100D01478 /* UIView+PinnedSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C247C9A27287D2100D01478 /* UIView+PinnedSubview.swift */; };
 		7C247C9D27287F0000D01478 /* TextFieldContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C247C9C27287F0000D01478 /* TextFieldContentView.swift */; };
 		7C247C9F2728803D00D01478 /* UIContentConfiguration+Stateless.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C247C9E2728803D00D01478 /* UIContentConfiguration+Stateless.swift */; };
@@ -36,6 +37,7 @@
 		176AC944A028E50FE93BEB8A /* Pods-Today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today.release.xcconfig"; path = "Target Support Files/Pods-Today/Pods-Today.release.xcconfig"; sourceTree = "<group>"; };
 		1EF2C95A38A7E549BE0C4550 /* Pods_Today.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Today.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78866288294B820F004F3568 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		7886633C2953449C004F3568 /* ReminderListStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListStyle.swift; sourceTree = "<group>"; };
 		7B4B2B9274A24E5A1221E932 /* Pods-Today.release (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today.release (development).xcconfig"; path = "Target Support Files/Pods-Today/Pods-Today.release (development).xcconfig"; sourceTree = "<group>"; };
 		7C247C9A27287D2100D01478 /* UIView+PinnedSubview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+PinnedSubview.swift"; sourceTree = "<group>"; };
 		7C247C9C27287F0000D01478 /* TextFieldContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldContentView.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				7CB0773327178CBA0042FB15 /* Date+Today.swift */,
 				7CB07731270FAF0E0042FB15 /* Reminder.swift */,
 				7CB0773527179CBF0042FB15 /* UIColor+Today.swift */,
+				7886633C2953449C004F3568 /* ReminderListStyle.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				7CB07721270FAA1C0042FB15 /* ReminderListViewController.swift in Sources */,
 				7CB0773D271A1BC40042FB15 /* ReminderListViewController+Actions.swift in Sources */,
 				7CB07741271DCE4D0042FB15 /* ReminderViewController.swift in Sources */,
+				7886633D2953449C004F3568 /* ReminderListStyle.swift in Sources */,
 				7C247C9F2728803D00D01478 /* UIContentConfiguration+Stateless.swift in Sources */,
 				7CB0773427178CBA0042FB15 /* Date+Today.swift in Sources */,
 				7CB0771D270FAA1C0042FB15 /* AppDelegate.swift in Sources */,
