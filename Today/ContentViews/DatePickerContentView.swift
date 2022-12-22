@@ -36,6 +36,7 @@ class DatePickerContentView: UIView, UIContentView {
         datePicker.date = configuration.date
     }
 
+    //MARK: - 미리알림날짜 편집내용 저장
     @objc private func didPick(_ sender: UIDatePicker) { // 미리알림날짜 편집내용 저장
         guard let configuration = configuration as? DatePickerContentView.Configuration else { return }
         configuration.onChange(sender.date) //새 날짜 전달

@@ -19,8 +19,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y03-Vv-yIT">
                                 <rect key="frame" x="20" y="139" width="374" height="458"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waffle" translatesAutoresizingMaskIntoConstraints="NO" id="PSD-p5-Wcg">
-                                        <rect key="frame" x="8" y="0.0" width="375" height="458"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waffle-main" translatesAutoresizingMaskIntoConstraints="NO" id="PSD-p5-Wcg">
+                                        <rect key="frame" x="8" y="0.0" width="375" height="477"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -28,7 +28,7 @@
                                     <constraint firstItem="PSD-p5-Wcg" firstAttribute="top" secondItem="Y03-Vv-yIT" secondAttribute="top" id="CQC-ru-876"/>
                                     <constraint firstAttribute="trailing" secondItem="PSD-p5-Wcg" secondAttribute="trailing" constant="-9" id="OOG-n9-gQh"/>
                                     <constraint firstItem="PSD-p5-Wcg" firstAttribute="leading" secondItem="Y03-Vv-yIT" secondAttribute="leading" constant="8" id="mIi-5c-bxP"/>
-                                    <constraint firstAttribute="bottom" secondItem="PSD-p5-Wcg" secondAttribute="bottom" id="vO6-Sm-y9p"/>
+                                    <constraint firstAttribute="bottom" secondItem="PSD-p5-Wcg" secondAttribute="bottom" constant="-19" id="vO6-Sm-y9p"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GDSC             Waffle어깨요정" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Whu-se-eg7">
@@ -62,7 +62,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="waffle" width="2048" height="2048"/>
+        <image name="waffle-main" width="1024" height="1024"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

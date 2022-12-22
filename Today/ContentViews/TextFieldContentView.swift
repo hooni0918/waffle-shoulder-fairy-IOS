@@ -1,5 +1,6 @@
 
 import UIKit
+import Alamofire
 
 class TextFieldContentView: UIView, UIContentView {
     struct Configuration: UIContentConfiguration {
@@ -21,7 +22,7 @@ class TextFieldContentView: UIView, UIContentView {
     override var intrinsicContentSize: CGSize {
         CGSize(width: 0, height: 44)
     }
-
+    
     init(_ configuration: UIContentConfiguration) {
         self.configuration = configuration
         super.init(frame: .zero)
@@ -29,7 +30,7 @@ class TextFieldContentView: UIView, UIContentView {
         textField.addTarget(self, action: #selector(didChange(_:)), for: .editingChanged) //이벤트 대상동작
         textField.clearButtonMode = .whileEditing
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -39,14 +40,64 @@ class TextFieldContentView: UIView, UIContentView {
         textField.text = configuration.text
     }
     
-    // 이게뭐지..?
+    //MARK: - 내용 편집내용 저장
     @objc private func didChange(_ sender: UITextField) {
         guard let configuration = configuration as? TextFieldContentView.Configuration else { return }
         configuration.onChange(textField.text ?? "")
+        
+        //  MARK: get
+        //        AF.request("http://localhost:8080/category").responseJSON() { response in
+        //          switch response.result {
+        //          case .success:
+        //            if let data = try! response.result.get() as? [String: Any] {
+        //              print(data)
+        //            }
+        //          case .failure(let error):
+        //            print("Error: \(error)")
+        //            return
+        //          }
+        //        }
+        //MARK: 피오니코드 (실패함)
+        //        AF.request("http://34.64.114.243:8080/category", method: .post, parameters: ["key": "hello!"], encoding: URLEncoding.httpBody, headers: ["Content-Type":"application/json", "Accept":"application/json"] ).responseJSON() { response in
+        //          switch response.result {
+        //          case .success:
+        //            if let data = try! response.result.get() as? [String: Any] {
+        //              print(data)
+        //            }
+        //          case .failure(let error):
+        //            print("Error: \(error)")
+        //            return
+        //          }
+        //        }
+        //
+        //    }
+        //
+        let url = "http://34.64.114.243:8080/category"
+        var request = URLRequest(url: URL(string: url)!)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.timeoutInterval = 10
+        
+        // POST 로 보낼 정보
+        let params = ["id":"아이디", "pw":"패스워드"] as Dictionary
+        
+        // httpBody 에 parameters 추가
+        do {
+            try request.httpBody = JSONSerialization.data(withJSONObject: params, options: [])
+        } catch {
+            print("http Body Error")
+        }
+        
+        AF.request(request).responseString { (response) in
+            switch response.result {
+            case .success:
+                print("POST 성공")
+            case .failure(let error):
+                print("🚫 Alamofire Request Error\nCode:\(error._code), Message: \(error.errorDescription!)")
+            }
+        }
     }
-    
 }
-
 
 extension UICollectionViewListCell {
     func textFieldConfiguration() -> TextFieldContentView.Configuration {
