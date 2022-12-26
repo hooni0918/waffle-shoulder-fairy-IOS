@@ -1,5 +1,6 @@
 
 import UIKit
+import Alamofire
 
 class ReminderListViewController: UICollectionViewController {
     var dataSource: DataSource!
@@ -8,9 +9,9 @@ class ReminderListViewController: UICollectionViewController {
     var filteredReminders: [Reminder] {
         return reminders.filter { listStyle.shouldInclude(date: $0.dueDate) }.sorted { $0.dueDate < $1.dueDate }
     }
-    var listStyle: ReminderListStyle = .today
+    var listStyle: ReminderListStyle = .school
     let listStyleSegmentedControl = UISegmentedControl(items: [
-        ReminderListStyle.today.name, ReminderListStyle.future.name, ReminderListStyle.all.name
+        ReminderListStyle.school.name, ReminderListStyle.club.name, ReminderListStyle.all.name
     ])
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,6 +70,36 @@ class ReminderListViewController: UICollectionViewController {
                self?.deleteReminder(with: id)
                self?.updateSnapshot()
                completion(false)
+               
+               
+               func deleteMethod() {
+                   AF.request("http://34.64.114.243:8080/category/todos/1", method: .delete, parameters: nil, headers: nil).validate(statusCode: 200 ..< 299).responseData { response in
+                       switch response.result {
+                           case .success(let data):
+                               do {
+                                   guard let jsonObject = try JSONSerialization.jsonObject(with: data) as? [String: Any] else {
+                                       print("Error: Cannot convert data to JSON object")
+                                       return
+                                   }
+                                   guard let prettyJsonData = try? JSONSerialization.data(withJSONObject: jsonObject, options: .prettyPrinted) else {
+                                       print("Error: Cannot convert JSON object to Pretty JSON data")
+                                       return
+                                   }
+                                   guard let prettyPrintedJson = String(data: prettyJsonData, encoding: .utf8) else {
+                                       print("Error: Could print JSON in String")
+                                       return
+                                   }
+
+                                   print(prettyPrintedJson)
+                               } catch {
+                                   print("Error: Trying to convert JSON data to string")
+                                   return
+                               }
+                           case .failure(let error):
+                               print(error)
+                       }
+                   }
+               }
            }
            return UISwipeActionsConfiguration(actions: [deleteAction])
     }

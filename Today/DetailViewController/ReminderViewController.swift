@@ -1,52 +1,5 @@
-//-URL
-//https://honggun-blog.herokuapp.com/MAKE_CONTENTS
-//
-//-파라미터
-//NAME: 이름(String)
-//BORN: 출생년도(Int)
-//JOB: 직업(String)
-//
-//-메서드
-//POST
-//
-//-반환값
-//문자열
-
-//https://velog.io/@gnwjd309/iOS-Alamofire
-//
-//let url = "https://어쩌구저쩌구/test.jpg"
-//
-///** 파일에 저장하기 위한 코드 */
-//let fileManager = FileManager.default
-//let appURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
-//let fileName : String = URL(string: url)!.lastPathComponent /** url의 마지막 문자열로 이름 지정 */
-//let fileURL = appURL.appendingPathComponent(fileName)
-//
-///** 파일 경로 지정 및 다운로드 옵션 설정 (이전 파일 삭제, 디렉토리 생성) */
-//let destination: DownloadRequest.Destination = { _, _ in
-//    return (fileURL, [.removePreviousFile, .createIntermediateDirectories])
-//}
-//
-//AF.download(url,
-//            method: .get,
-//            parameters: nil,
-//            encoding: JSONEncoding.default,
-//            to: destination)
-//    .downloadProgress { progress in
-//        /** 다운로드 progress */
-//        /** progressView를 사용할 때 여기에 작성 */
-//    }.response{ response in
-//
-//    if response.error != nil {
-//        /** 파일 다운로드 실패*/
-//    } else{
-//        /** 파일 다운로드 성공*/
-//    }
-//}
-
 import UIKit
 import Alamofire
-import SwiftyJSON
 
 class ReminderViewController: UICollectionViewController {
     
