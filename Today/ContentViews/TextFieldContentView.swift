@@ -3,6 +3,10 @@ import UIKit
 import Alamofire
 
 class TextFieldContentView: UIView, UIContentView {
+    
+    // var title: String
+    
+    
     struct Configuration: UIContentConfiguration {
         var text: String? = ""
         var onChange: (String) ->Void = { _ in } // 빈 작업 핸들러 추가해서 텍스트필드의 텍스트 편집하려는 동작 포착
@@ -70,59 +74,70 @@ class TextFieldContentView: UIView, UIContentView {
         //          }
         //        }
         //
+        
+        //  MARK - 이거 됨
+        
+        
+        
+        //        func postMethod() {
+        //            let params: Parameters = [
+        //                "categoryId": "1",
+        //                "content": "안녕",
+        //                "memmo": "반가워",
+        //                "isChecked" : "none"
+        //            ]
+        //
+        //            AF.request("https://waffle-shoulder/category/1/todoㄷ", method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil).validate(statusCode: 200 ..< 299).responseData { response in
+        //                switch response.result {
+        //                case .success(let data):
+        //                    do {
+        //                        guard let jsonObject = try JSONSerialization.jsonObject(with: data) as? [String: Any] else {
+        //                            print("Error: Cannot convert data to JSON object")
+        //                            return
+        //                        }
+        //                        guard let prettyJsonData = try? JSONSerialization.data(withJSONObject: jsonObject, options: .prettyPrinted) else {
+        //                            print("Error: Cannot convert JSON object to Pretty JSON data")
+        //                            return
+        //                        }
+        //                        guard let prettyPrintedJson = String(data: prettyJsonData, encoding: .utf8) else {
+        //                            print("Error: Could print JSON in String")
+        //                            return
+        //                        }
+        //
+        //                        print(prettyPrintedJson)
+        //                    } catch {
+        //                        print("Error: Trying to convert JSON data to string")
+        //                        return
+        //                    }
+        //                case .failure(let error):
+        //                    print(error)
+        //                }
+        //            }
+        //        }
+        //
+        //        //        func getTest() {
+        //        //                let url = "http://34.64.114.243:8080/category"
+        //        //                AF.request(url,
+        //        //                           method: .get,
+        //        //                           parameters: nil,
+        //        //                           encoding: URLEncoding.default,
+        //        //                           headers: ["Content-Type":"application/json", "Accept":"application/json"])
+        //        //                    .validate(statusCode: 200..<300)
+        //        //                    .responseJSON { (json) in
+        //        //                        //여기서 가져온 데이터를 자유롭게 활용하세요.
+        //        //                        print(json)
+        //        //                }
+        //        //            }
+        //        //        }
+        //        //
         //    }
-        // MARK - 이거 됨
-        let url = "http://34.64.114.243:8080/category"
-        var request = URLRequest(url: URL(string: url)!)
-        request.httpMethod = "POST"
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.timeoutInterval = 10
-        
-        // POST 로 보낼 정보
-        let params = ["제목":"내용", "상세내용":"내용상세"] as Dictionary
-        //let params2 = ["제목":"이야", "상세내용":"우와" ] as Dictionary
-
-        // httpBody 에 parameters 추가
-        do {
-            try request.httpBody = JSONSerialization.data(withJSONObject: params, options: [])
-        } catch {
-            print("http Body Error")
-        }
-        
-        AF.request(request).responseString { (response) in
-            switch response.result {
-            case .success:
-                print("POST 성공")
-            case .failure(let error):
-                print("🚫 Alamofire Request Error\nCode:\(error._code), Message: \(error.errorDescription!)")
-            }
-            
-            
-            //        func getTest() {
-            //                let url = "http://34.64.114.243:8080/category"
-            //                AF.request(url,
-            //                           method: .get,
-            //                           parameters: nil,
-            //                           encoding: URLEncoding.default,
-            //                           headers: ["Content-Type":"application/json", "Accept":"application/json"])
-            //                    .validate(statusCode: 200..<300)
-            //                    .responseJSON { (json) in
-            //                        //여기서 가져온 데이터를 자유롭게 활용하세요.
-            //                        print(json)
-            //                }
-            //            }
-            //        }
-            //
-        }
         
     }
-    
 }
-//}
-
 extension UICollectionViewListCell {
     func textFieldConfiguration() -> TextFieldContentView.Configuration {
         TextFieldContentView.Configuration()
     }
 }
+
 

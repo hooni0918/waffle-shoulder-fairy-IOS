@@ -90,7 +90,7 @@ class ReminderViewController: UICollectionViewController {
         }
         
         private func prepareForEditing() {
-            navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(didCancelEdit)) // 취소버튼 할당
+            navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(didCancelEdit))
             updateSnapshotForEditing()
         }
         

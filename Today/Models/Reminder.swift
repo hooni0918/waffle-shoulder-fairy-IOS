@@ -17,6 +17,7 @@ extension Array where Element == Reminder {
         return index
     }
 }
+
 // 아니 왜안돼
 #if DEBUG
 extension Reminder {

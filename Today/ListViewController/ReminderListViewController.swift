@@ -13,6 +13,7 @@ class ReminderListViewController: UICollectionViewController {
     let listStyleSegmentedControl = UISegmentedControl(items: [
         ReminderListStyle.school.name, ReminderListStyle.club.name, ReminderListStyle.all.name
     ])
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,12 +35,14 @@ class ReminderListViewController: UICollectionViewController {
 
         navigationItem.titleView = listStyleSegmentedControl
 
-        
         updateSnapshot()
         
         collectionView.dataSource = dataSource
     }
     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+       
+      
+        
         //목록 셀 선택하고 거기로 변경하기 or 다른동작 시작하기
         let id = filteredReminders[indexPath.item].id  // 이 경로랑 연결된 식별자를 검색
         showDetail(for: id) // 탐색에서 상세 뷰 컨트롤러 추가해서 상세뷰가 화면에 푸시됨
