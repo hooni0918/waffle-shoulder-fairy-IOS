@@ -43,7 +43,7 @@ extension ReminderListViewController {
         cell.backgroundConfiguration = backgroundConfiguration
     }
     
-    func completeReminder(with id: Reminder.ID) {   // 모델에서 미리알람 가져오
+    func completeReminder(with id: Reminder.ID) {   // 모델에서 미리알람 가져오고
         var reminder = reminder(for: id) // 여기서 미리알람 호출함
         reminder.isComplete.toggle()    //속성전환
         update(reminder, with: id)  //미리알람 업뎃
