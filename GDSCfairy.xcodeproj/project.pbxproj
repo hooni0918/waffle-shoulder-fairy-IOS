@@ -1,0 +1,535 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		78A4E095295ACCAF0004A7B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A4E094295ACCAF0004A7B1 /* AppDelegate.swift */; };
+		78A4E097295ACCAF0004A7B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A4E096295ACCAF0004A7B1 /* SceneDelegate.swift */; };
+		78A4E099295ACCAF0004A7B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A4E098295ACCAF0004A7B1 /* ViewController.swift */; };
+		78A4E09C295ACCAF0004A7B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78A4E09A295ACCAF0004A7B1 /* Main.storyboard */; };
+		78A4E09E295ACCB10004A7B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78A4E09D295ACCB10004A7B1 /* Assets.xcassets */; };
+		78A4E0A1295ACCB10004A7B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78A4E09F295ACCB10004A7B1 /* LaunchScreen.storyboard */; };
+		78A4E0BD295AD01C0004A7B1 /* DatePickerContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A4E0A9295AD01C0004A7B1 /* DatePickerContentView.swift */; };
+		78A4E0BE295AD01C0004A7B1 /* UIView+PinnedSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A4E0AA295AD01C0004A7B1 /* UIView+PinnedSubview.swift */; };
+		78A4E0BF295AD01C0004A7B1 /* TextFieldContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A4E0AB295AD01C0004A7B1 /* TextFieldContentView.swift */; };
+		78A4E0C0295AD01C0004A7B1 /* TextViewContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A4E0AC295AD01C0004A7B1 /* TextViewContentView.swift */; };
+		78A4E0C1295AD01C0004A7B1 /* UIContentConfiguration+Stateless.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A4E0AD295AD01C0004A7B1 /* UIContentConfiguration+Stateless.swift */; };
+		78A4E0C2295AD01C0004A7B1 /* ReminderViewController+CellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A4E0AF295AD01C0004A7B1 /* ReminderViewController+CellConfiguration.swift */; };
+		78A4E0C3295AD01C0004A7B1 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A4E0B0295AD01C0004A7B1 /* ReminderViewController.swift */; };
+		78A4E0C4295AD01C0004A7B1 /* ReminderViewController+Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A4E0B1295AD01C0004A7B1 /* ReminderViewController+Row.swift */; };
+		78A4E0C5295AD01C0004A7B1 /* ReminderViewController+Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A4E0B2295AD01C0004A7B1 /* ReminderViewController+Section.swift */; };
+		78A4E0C6295AD01C0004A7B1 /* ReminderListViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A4E0B4295AD01C0004A7B1 /* ReminderListViewController+DataSource.swift */; };
+		78A4E0C7295AD01C0004A7B1 /* ReminderDoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A4E0B5295AD01C0004A7B1 /* ReminderDoneButton.swift */; };
+		78A4E0C8295AD01C0004A7B1 /* ReminderListViewController+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A4E0B6295AD01C0004A7B1 /* ReminderListViewController+Actions.swift */; };
+		78A4E0C9295AD01C0004A7B1 /* ReminderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A4E0B7295AD01C0004A7B1 /* ReminderListViewController.swift */; };
+		78A4E0CA295AD01C0004A7B1 /* ReminderListStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A4E0B9295AD01C0004A7B1 /* ReminderListStyle.swift */; };
+		78A4E0CB295AD01C0004A7B1 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A4E0BA295AD01C0004A7B1 /* Reminder.swift */; };
+		78A4E0CC295AD01C0004A7B1 /* UIColor+Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A4E0BB295AD01C0004A7B1 /* UIColor+Today.swift */; };
+		78A4E0CD295AD01C0004A7B1 /* Date+Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A4E0BC295AD01C0004A7B1 /* Date+Today.swift */; };
+		E9E2386B96D285F090C46D30 /* Pods_GDSCfairy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 210D44C7391993E0DD6A2FA0 /* Pods_GDSCfairy.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		210D44C7391993E0DD6A2FA0 /* Pods_GDSCfairy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GDSCfairy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		69D0EF0BE1D931D3FAC5E0A5 /* Pods-GDSCfairy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GDSCfairy.debug.xcconfig"; path = "Target Support Files/Pods-GDSCfairy/Pods-GDSCfairy.debug.xcconfig"; sourceTree = "<group>"; };
+		78A4E091295ACCAF0004A7B1 /* GDSCfairy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GDSCfairy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		78A4E094295ACCAF0004A7B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		78A4E096295ACCAF0004A7B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		78A4E098295ACCAF0004A7B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		78A4E09B295ACCAF0004A7B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		78A4E09D295ACCB10004A7B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		78A4E0A0295ACCB10004A7B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		78A4E0A2295ACCB10004A7B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78A4E0A9295AD01C0004A7B1 /* DatePickerContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerContentView.swift; sourceTree = "<group>"; };
+		78A4E0AA295AD01C0004A7B1 /* UIView+PinnedSubview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+PinnedSubview.swift"; sourceTree = "<group>"; };
+		78A4E0AB295AD01C0004A7B1 /* TextFieldContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldContentView.swift; sourceTree = "<group>"; };
+		78A4E0AC295AD01C0004A7B1 /* TextViewContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewContentView.swift; sourceTree = "<group>"; };
+		78A4E0AD295AD01C0004A7B1 /* UIContentConfiguration+Stateless.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIContentConfiguration+Stateless.swift"; sourceTree = "<group>"; };
+		78A4E0AF295AD01C0004A7B1 /* ReminderViewController+CellConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReminderViewController+CellConfiguration.swift"; sourceTree = "<group>"; };
+		78A4E0B0295AD01C0004A7B1 /* ReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
+		78A4E0B1295AD01C0004A7B1 /* ReminderViewController+Row.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReminderViewController+Row.swift"; sourceTree = "<group>"; };
+		78A4E0B2295AD01C0004A7B1 /* ReminderViewController+Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReminderViewController+Section.swift"; sourceTree = "<group>"; };
+		78A4E0B4295AD01C0004A7B1 /* ReminderListViewController+DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReminderListViewController+DataSource.swift"; sourceTree = "<group>"; };
+		78A4E0B5295AD01C0004A7B1 /* ReminderDoneButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderDoneButton.swift; sourceTree = "<group>"; };
+		78A4E0B6295AD01C0004A7B1 /* ReminderListViewController+Actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReminderListViewController+Actions.swift"; sourceTree = "<group>"; };
+		78A4E0B7295AD01C0004A7B1 /* ReminderListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderListViewController.swift; sourceTree = "<group>"; };
+		78A4E0B9295AD01C0004A7B1 /* ReminderListStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderListStyle.swift; sourceTree = "<group>"; };
+		78A4E0BA295AD01C0004A7B1 /* Reminder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		78A4E0BB295AD01C0004A7B1 /* UIColor+Today.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Today.swift"; sourceTree = "<group>"; };
+		78A4E0BC295AD01C0004A7B1 /* Date+Today.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Today.swift"; sourceTree = "<group>"; };
+		DAA1431AA997ABD4C9595E4E /* Pods-GDSCfairy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GDSCfairy.release.xcconfig"; path = "Target Support Files/Pods-GDSCfairy/Pods-GDSCfairy.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		78A4E08E295ACCAF0004A7B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9E2386B96D285F090C46D30 /* Pods_GDSCfairy.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2868A5743B979B54496F1E18 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				69D0EF0BE1D931D3FAC5E0A5 /* Pods-GDSCfairy.debug.xcconfig */,
+				DAA1431AA997ABD4C9595E4E /* Pods-GDSCfairy.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		78A4E088295ACCAF0004A7B1 = {
+			isa = PBXGroup;
+			children = (
+				78A4E093295ACCAF0004A7B1 /* GDSCfairy */,
+				78A4E092295ACCAF0004A7B1 /* Products */,
+				2868A5743B979B54496F1E18 /* Pods */,
+				BFD6F686D547EFC1D24012AD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		78A4E092295ACCAF0004A7B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78A4E091295ACCAF0004A7B1 /* GDSCfairy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78A4E093295ACCAF0004A7B1 /* GDSCfairy */ = {
+			isa = PBXGroup;
+			children = (
+				78A4E0A8295AD01C0004A7B1 /* ContentViews */,
+				78A4E0AE295AD01C0004A7B1 /* DetailViewController */,
+				78A4E0B3295AD01C0004A7B1 /* ListViewController */,
+				78A4E0B8295AD01C0004A7B1 /* Models */,
+				78A4E094295ACCAF0004A7B1 /* AppDelegate.swift */,
+				78A4E096295ACCAF0004A7B1 /* SceneDelegate.swift */,
+				78A4E098295ACCAF0004A7B1 /* ViewController.swift */,
+				78A4E09A295ACCAF0004A7B1 /* Main.storyboard */,
+				78A4E09D295ACCB10004A7B1 /* Assets.xcassets */,
+				78A4E09F295ACCB10004A7B1 /* LaunchScreen.storyboard */,
+				78A4E0A2295ACCB10004A7B1 /* Info.plist */,
+			);
+			path = GDSCfairy;
+			sourceTree = "<group>";
+		};
+		78A4E0A8295AD01C0004A7B1 /* ContentViews */ = {
+			isa = PBXGroup;
+			children = (
+				78A4E0A9295AD01C0004A7B1 /* DatePickerContentView.swift */,
+				78A4E0AA295AD01C0004A7B1 /* UIView+PinnedSubview.swift */,
+				78A4E0AB295AD01C0004A7B1 /* TextFieldContentView.swift */,
+				78A4E0AC295AD01C0004A7B1 /* TextViewContentView.swift */,
+				78A4E0AD295AD01C0004A7B1 /* UIContentConfiguration+Stateless.swift */,
+			);
+			path = ContentViews;
+			sourceTree = "<group>";
+		};
+		78A4E0AE295AD01C0004A7B1 /* DetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				78A4E0AF295AD01C0004A7B1 /* ReminderViewController+CellConfiguration.swift */,
+				78A4E0B0295AD01C0004A7B1 /* ReminderViewController.swift */,
+				78A4E0B1295AD01C0004A7B1 /* ReminderViewController+Row.swift */,
+				78A4E0B2295AD01C0004A7B1 /* ReminderViewController+Section.swift */,
+			);
+			path = DetailViewController;
+			sourceTree = "<group>";
+		};
+		78A4E0B3295AD01C0004A7B1 /* ListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				78A4E0B4295AD01C0004A7B1 /* ReminderListViewController+DataSource.swift */,
+				78A4E0B5295AD01C0004A7B1 /* ReminderDoneButton.swift */,
+				78A4E0B6295AD01C0004A7B1 /* ReminderListViewController+Actions.swift */,
+				78A4E0B7295AD01C0004A7B1 /* ReminderListViewController.swift */,
+			);
+			path = ListViewController;
+			sourceTree = "<group>";
+		};
+		78A4E0B8295AD01C0004A7B1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				78A4E0B9295AD01C0004A7B1 /* ReminderListStyle.swift */,
+				78A4E0BA295AD01C0004A7B1 /* Reminder.swift */,
+				78A4E0BB295AD01C0004A7B1 /* UIColor+Today.swift */,
+				78A4E0BC295AD01C0004A7B1 /* Date+Today.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BFD6F686D547EFC1D24012AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				210D44C7391993E0DD6A2FA0 /* Pods_GDSCfairy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		78A4E090295ACCAF0004A7B1 /* GDSCfairy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78A4E0A5295ACCB10004A7B1 /* Build configuration list for PBXNativeTarget "GDSCfairy" */;
+			buildPhases = (
+				7D348D52FDD83DB2C3FCF68A /* [CP] Check Pods Manifest.lock */,
+				78A4E08D295ACCAF0004A7B1 /* Sources */,
+				78A4E08E295ACCAF0004A7B1 /* Frameworks */,
+				78A4E08F295ACCAF0004A7B1 /* Resources */,
+				E588E72F21AF7B351961856C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GDSCfairy;
+			productName = GDSCfairy;
+			productReference = 78A4E091295ACCAF0004A7B1 /* GDSCfairy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		78A4E089295ACCAF0004A7B1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					78A4E090295ACCAF0004A7B1 = {
+						CreatedOnToolsVersion = 13.4;
+					};
+				};
+			};
+			buildConfigurationList = 78A4E08C295ACCAF0004A7B1 /* Build configuration list for PBXProject "GDSCfairy" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 78A4E088295ACCAF0004A7B1;
+			productRefGroup = 78A4E092295ACCAF0004A7B1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				78A4E090295ACCAF0004A7B1 /* GDSCfairy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		78A4E08F295ACCAF0004A7B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78A4E0A1295ACCB10004A7B1 /* LaunchScreen.storyboard in Resources */,
+				78A4E09E295ACCB10004A7B1 /* Assets.xcassets in Resources */,
+				78A4E09C295ACCAF0004A7B1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7D348D52FDD83DB2C3FCF68A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GDSCfairy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E588E72F21AF7B351961856C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GDSCfairy/Pods-GDSCfairy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GDSCfairy/Pods-GDSCfairy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GDSCfairy/Pods-GDSCfairy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		78A4E08D295ACCAF0004A7B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78A4E0C5295AD01C0004A7B1 /* ReminderViewController+Section.swift in Sources */,
+				78A4E0CD295AD01C0004A7B1 /* Date+Today.swift in Sources */,
+				78A4E0BD295AD01C0004A7B1 /* DatePickerContentView.swift in Sources */,
+				78A4E099295ACCAF0004A7B1 /* ViewController.swift in Sources */,
+				78A4E0C3295AD01C0004A7B1 /* ReminderViewController.swift in Sources */,
+				78A4E0C6295AD01C0004A7B1 /* ReminderListViewController+DataSource.swift in Sources */,
+				78A4E0C7295AD01C0004A7B1 /* ReminderDoneButton.swift in Sources */,
+				78A4E0C2295AD01C0004A7B1 /* ReminderViewController+CellConfiguration.swift in Sources */,
+				78A4E0C8295AD01C0004A7B1 /* ReminderListViewController+Actions.swift in Sources */,
+				78A4E0C9295AD01C0004A7B1 /* ReminderListViewController.swift in Sources */,
+				78A4E0CA295AD01C0004A7B1 /* ReminderListStyle.swift in Sources */,
+				78A4E095295ACCAF0004A7B1 /* AppDelegate.swift in Sources */,
+				78A4E0C4295AD01C0004A7B1 /* ReminderViewController+Row.swift in Sources */,
+				78A4E0C0295AD01C0004A7B1 /* TextViewContentView.swift in Sources */,
+				78A4E097295ACCAF0004A7B1 /* SceneDelegate.swift in Sources */,
+				78A4E0CC295AD01C0004A7B1 /* UIColor+Today.swift in Sources */,
+				78A4E0C1295AD01C0004A7B1 /* UIContentConfiguration+Stateless.swift in Sources */,
+				78A4E0CB295AD01C0004A7B1 /* Reminder.swift in Sources */,
+				78A4E0BF295AD01C0004A7B1 /* TextFieldContentView.swift in Sources */,
+				78A4E0BE295AD01C0004A7B1 /* UIView+PinnedSubview.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		78A4E09A295ACCAF0004A7B1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78A4E09B295ACCAF0004A7B1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		78A4E09F295ACCB10004A7B1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78A4E0A0295ACCB10004A7B1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		78A4E0A3295ACCB10004A7B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		78A4E0A4295ACCB10004A7B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		78A4E0A6295ACCB10004A7B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69D0EF0BE1D931D3FAC5E0A5 /* Pods-GDSCfairy.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D2DRA3F792;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GDSCfairy/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GDSCfairy;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.waffle.GDSCfairy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		78A4E0A7295ACCB10004A7B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAA1431AA997ABD4C9595E4E /* Pods-GDSCfairy.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D2DRA3F792;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GDSCfairy/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GDSCfairy;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.waffle.GDSCfairy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		78A4E08C295ACCAF0004A7B1 /* Build configuration list for PBXProject "GDSCfairy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78A4E0A3295ACCB10004A7B1 /* Debug */,
+				78A4E0A4295ACCB10004A7B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78A4E0A5295ACCB10004A7B1 /* Build configuration list for PBXNativeTarget "GDSCfairy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78A4E0A6295ACCB10004A7B1 /* Debug */,
+				78A4E0A7295ACCB10004A7B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 78A4E089295ACCAF0004A7B1 /* Project object */;
+}
