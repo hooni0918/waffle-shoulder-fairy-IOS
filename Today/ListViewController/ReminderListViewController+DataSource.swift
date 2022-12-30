@@ -64,7 +64,7 @@ extension ReminderListViewController {
         let symbolConfiguration = UIImage.SymbolConfiguration(textStyle: .title1)
         let image = UIImage(systemName: symbolName, withConfiguration: symbolConfiguration)
         let button = ReminderDoneButton()   //main에서 버튼이 눌리는지
-        button.addTarget(self, action: #selector(didPressDoneButton(_:)), for: .touchUpInside)  // 액션
+        button.addTarget(self, action: #selector(didPressDoneButton(_:)), for: .touchUpInside)  
         button.id = reminder.id //미리알람 속성식별
         button.setImage(image, for: .normal)
         return UICellAccessory.CustomViewConfiguration(customView: button, placement: .leading(displayed: .always))

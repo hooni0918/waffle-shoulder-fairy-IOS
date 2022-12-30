@@ -1,6 +1,6 @@
 
 import UIKit
-import Alamofire
+//import Alarmofire
 
 class ReminderListViewController: UICollectionViewController {
     var dataSource: DataSource!
@@ -74,36 +74,36 @@ class ReminderListViewController: UICollectionViewController {
                self?.updateSnapshot()
                completion(false)
                
-               
-               func deleteMethod() {
-                   AF.request("http://34.64.114.243:8080/category/todos/1", method: .delete, parameters: nil, headers: nil).validate(statusCode: 200 ..< 299).responseData { response in
-                       switch response.result {
-                           case .success(let data):
-                               do {
-                                   guard let jsonObject = try JSONSerialization.jsonObject(with: data) as? [String: Any] else {
-                                       print("Error: Cannot convert data to JSON object")
-                                       return
-                                   }
-                                   guard let prettyJsonData = try? JSONSerialization.data(withJSONObject: jsonObject, options: .prettyPrinted) else {
-                                       print("Error: Cannot convert JSON object to Pretty JSON data")
-                                       return
-                                   }
-                                   guard let prettyPrintedJson = String(data: prettyJsonData, encoding: .utf8) else {
-                                       print("Error: Could print JSON in String")
-                                       return
-                                   }
-
-                                   print(prettyPrintedJson)
-                               } catch {
-                                   print("Error: Trying to convert JSON data to string")
-                                   return
-                               }
-                           case .failure(let error):
-                               print(error)
-                       }
-                   }
-               }
-           }
-           return UISwipeActionsConfiguration(actions: [deleteAction])
-    }
+//
+//               func deleteMethod() {
+//                   AF.request("http://34.64.114.243:8080/category/todos/1", method: .delete, parameters: nil, headers: nil).validate(statusCode: 200 ..< 299).responseData { response in
+//                       switch response.result {
+//                           case .success(let data):
+//                               do {
+//                                   guard let jsonObject = try JSONSerialization.jsonObject(with: data) as? [String: Any] else {
+//                                       print("Error: Cannot convert data to JSON object")
+//                                       return
+//                                   }
+//                                   guard let prettyJsonData = try? JSONSerialization.data(withJSONObject: jsonObject, options: .prettyPrinted) else {
+//                                       print("Error: Cannot convert JSON object to Pretty JSON data")
+//                                       return
+//                                   }
+//                                   guard let prettyPrintedJson = String(data: prettyJsonData, encoding: .utf8) else {
+//                                       print("Error: Could print JSON in String")
+//                                       return
+//                                   }
+//
+//                                   print(prettyPrintedJson)
+//                               } catch {
+//                                   print("Error: Trying to convert JSON data to string")
+//                                   return
+//                               }
+//                           case .failure(let error):
+//                               print(error)
+//                       }
+//                   }
+//               }
+//           }
+        //   return UISwipeActionsConfiguration(actions: [deleteAction])
+  //  }
 }
